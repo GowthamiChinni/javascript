@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Color Guessing Game</title>
+</head>
+<body >
+<h1 >Guess the correct color for rgb(65,0,130)</h1>
+
+<button style="margin-left:30px;background-color: Black">Blue</button>
+<button style="margin-left:30px;background-color: Pink">orange</button>
+<button style="margin-left:30px;background-color: Blue">yellow</button>
+   
+</body>
+</html>
