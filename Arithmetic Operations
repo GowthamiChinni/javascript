@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arithmetic Operations</title>
+</head>
+<body>
+
+    <h2>Simple Arithemetic Operations</h2>
+
+    <input type="text" id="result" disabled>
+
+    <br>
+
+    <button onclick="performOperation('add')">Addition (+)</button>
+    <button onclick="performOperation('subtract')">Subtraction (-)</button>
+    <button onclick="performOperation('multiply')">Multiplication (*)</button>
+    <button onclick="performOperation('divide')">Division (/)</button>
+
+    <script>
+        function performOperation(operation) {
+            var num1 = parseFloat(prompt("Enter the first number:"));
+            var num2 = parseFloat(prompt("Enter the second number:"));
+
+            if (isNaN(num1) || isNaN(num2)) {
+                alert("Please enter valid numbers!");
+                return;
+            }
+
+            var result;
+
+            switch (operation) {
+                case 'add':
+                    result = num1 + num2;
+                    break;
+                case 'subtract':
+                    result = num1 - num2;
+                    break;
+                case 'multiply':
+                    result = num1 * num2;
+                    break;
+                case 'divide':
+                    if (num2 !== 0) {
+                        result = num1 / num2;
+                    } else {
+                        alert("Cannot divide by zero!");
+                        return;
+                    }
+                    break;
+                default:
+                    alert("Invalid operation!");
+                    return;
+            }
+
+            document.getElementById('result').value = result;
+        }
+    </script>
+
+</body>
+</html>
