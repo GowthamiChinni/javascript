@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let tel=+prompt("enter your telugu marks: ");
+        let eng=+prompt("enter your english marks: ");
+        let math1=+prompt("enter your maths1 marks: ");
+        let math2=+prompt("enter your maths2 marks: ");
+        let phy=+prompt("enter your physics marks: ");
+        let che=+prompt("enter your chemistry marks: ");
+         
+        let sub1=(tel>=35&&tel<=100);
+        let sub2=(eng>=35&&eng<=100);
+        let sub3=(math1>=35&&math1<=100);
+        let sub4=(math2>=35&&math2<=100);
+        let sub5=(phy>=35&&phy<=100);
+        let sub6=(che>=35&&che<=100);
+
+        if(sub1&&sub2&&sub3&&sub4&&sub5&&sub6);
+        let marks=((tel+eng+math1+math2+phy+che)/6);
+        if(marks>=90){
+            let grad="A";
+            window.alert(grad);
+        }else if(marks>=80&&marks<=89){
+            let grade="B";
+            window.alert(grade);
+        }else if(marks>=70&&marks<=89){
+            let grade="C";
+            window.alert(grade);
+        }else if(marks>=60&&marks<=79){
+            let grade="D";
+            window.alert(grade);
+        }else{
+            window.alert("fail");
+        }
+        
+    </script>
+</body>
+</html>
