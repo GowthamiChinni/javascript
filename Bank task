@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Banking</h1>
+    <button onclick="details()">AccountDetails</button>
+    <button onclick="creAmount()">creditamount</button>
+    <button onclick="debAmount()">debitAmount</button>
+    
+</body>
+<script>
+
+    let actualAmount=5000;
+    window.alert("actualamount "+actualAmount);
+    
+    function details(){
+        let pincode=6879;
+        let account_number=+prompt("enter you're account number ");
+        let actualPincode=+prompt("enter your pincode");
+        if(actualPincode===pincode){
+            window.alert("Pincode matched");
+            window.alert(account_number);
+            window.alert("munni");
+            window.alert("thank you!!");
+
+        }
+        else{
+            window.alert("pincode not matched");
+        }
+    }
+
+    function creAmount(){
+    let creditAmount=+prompt("enter creditAmount");
+     let totalAmount=actualAmount+creditAmount;
+    window.alert("your credit amount is successful done   "+totalAmount);
+    
+
+
+
+
+
+
+     window.alert("thank you!!");
+    // let newAmount=totalAmount+creditAmount;
+    // if(newAmount&&totalAmount){
+    //     window.alert("your credit amount is successful done   "+newAmount);
+    //  window.alert("thank you!!");
+    // }else{
+    //     window.alert("not credit");
+    // }
+}
+
+    function debAmount(){
+    let debitAmount=+prompt("enter debitAmount");
+    //let newAmount=actualAmount-debitAmount;
+   // window.alert(newAmount);
+    if(debitAmount>actualAmount){
+        window.alert("you have insufficient amount in your account....");
+    }
+    else{
+        window.alert("you have sufficient amount now you can withdraw")
+        let newAmount=actualAmount-debitAmount;
+        window.alert(newAmount);
+        window.alert("thank you!!");
+    }
+    }
+    
+    </script>
+</html>
